@@ -1,0 +1,8 @@
+{
+    "name": "DelphiCodeCoverage",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/solussaude/DelphiCodeCoverage.git",
+    "packageManager": "yarn@4.3.1",
+    "private": true
+}
