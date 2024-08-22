@@ -295,12 +295,12 @@ begin
         begin
           if TPath.GetExtension(searchResult.Name) = '.pas' then
             FFileNames.Add(TPath.GetFileNameWithoutExtension(searchResult.Name),
-              IncludeTrailingBackSlash(ASearchPath) + searchResult.Name);
+              IncludeTrailingPathDelimiter(ASearchPath) + searchResult.Name);
         end
         else if (searchResult.Name <> '.') and (searchResult.Name <> '..') then
         begin
           if ARecursive then
-            FindDelphiUnits(IncludeTrailingBackSlash(ASearchPath) +
+            FindDelphiUnits(IncludeTrailingPathDelimiter(ASearchPath) +
               searchResult.Name);
         end;
       until FindNext(searchResult) <> 0 finally FindClose(searchResult);
